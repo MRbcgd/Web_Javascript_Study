@@ -1,0 +1,20 @@
+<script type="text/javascript">
+  //현재 loaction 주소
+  console.log(location.toString(),location.href);
+
+  //별도의 프로퍼티 제공
+  document.write(location.protocol+"<br>");
+  document.write(location.host+"<br>");
+  document.write(location.port+"<br>");
+  document.write(location.pathname+"<br>");
+  document.write(location.search+"<br>");
+  document.write(location.hash+"<br>");
+
+  //문서이동 혹은 리로드
+  if(confirm('naver or this')){
+    location.href = 'http://www.naver.com';
+  }
+  else{
+    location.reload();
+  }
+</script>
