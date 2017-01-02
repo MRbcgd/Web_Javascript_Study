@@ -5,7 +5,17 @@
     <title></title>
   </head>
   <body>
-    <!--alert-->
-    <input type="button" onclick="alert('Hello World')" value="Hello World">
+    <!--confirm-->
+    <input type="button" onclick="func_confirm()" value="confirm">
+    <script type="text/javascript">
+      function func_confirm(){
+        if(confirm('yes or no')){
+          alert('yes');
+        }
+        else{
+          alert('no');
+        }
+      }
+    </script>
   </body>
 </html>
