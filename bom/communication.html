@@ -5,15 +5,15 @@
     <title></title>
   </head>
   <body>
-    <!--confirm-->
-    <input type="button" onclick="func_confirm()" value="confirm">
+    <!--prompt-->
+    <input type="button" onclick="func_prompt()" value="prompt">
     <script type="text/javascript">
-      function func_confirm(){
-        if(confirm('yes or no')){
-          alert('yes');
+      function func_prompt(){
+        if(prompt('enter your name','name')=='pch'){
+          alert('welcome pch');
         }
         else{
-          alert('no');
+          alert('try again!');
         }
       }
     </script>
