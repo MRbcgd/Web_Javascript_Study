@@ -11,7 +11,7 @@
   <li>hongkong</li>
 </ul>
 <script>
-//selector context 조회범위 조회
-  $(".marked").css("background-color","red");
-  $(".test #state").css("background-color","blue");//chaining
+//chaining이 끊기고 싶지않고 싶을 경우 find()를 사용, 하지만 find()를 남용하면 스파게티 소스가 된다.
+ $('.test').css("color","blue").find(".marked").css("background-color","red");
+
 </script>
