@@ -4,20 +4,14 @@
   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
   crossorigin="anonymous"></script>
 </head>
-<ul>
-  <li id='state'>ohio</li>
-  <li>hello</li>
+<a href="#" class="marked">welcome</a>
+<ul class="test">
+  <li id="state">ohio</li>
+  <li class="marked">hello</li>
   <li>hongkong</li>
 </ul>
 <script>
-//jQuery 속성제어
-  var state=$('#state');
-  state.attr('title','state of hawaii');//setAttribute
-  console.log(state.attr('title'));//getAttribue
-  console.log(state.prop('title'));
-
-  state.removeAttr('title');
-  console.log(state.attr('title'));
-  console.log(state.prop('title'));
-
+//selector context 조회범위 조회
+  $(".marked").css("background-color","red");
+  $(".test #state").css("background-color","blue");//chaining
 </script>
