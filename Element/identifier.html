@@ -1,14 +1,23 @@
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+</head>
 <ul>
-  <li class="hello">aaa</li>
-  <li class="ohio">bbb</li>
+  <li id='state'>ohio</li>
+  <li>hello</li>
+  <li>hongkong</li>
 </ul>
-<script type="text/javascript">
-//속성 api
-  var hello=document.getElementsByClassName('hello')[0];
-  hello.setAttribute('title','aaa');//title attribute 추가
-  console.log(hello.hasAttribute('title'));//title attribute 여부
-  console.log(hello.getAttribute('title'));//title attribute 추출
-  hello.removeAttribute('title');//title attribute 제거
-  console.log(hello.hasAttribute('title'));
+<script>
+//jQuery 속성제어
+  var state=$('#state');
+  state.attr('title','state of hawaii');//setAttribute
+  console.log(state.attr('title'));//getAttribue
+  console.log(state.prop('title'));
+
+  state.removeAttr('title');
+  console.log(state.attr('title'));
+  console.log(state.prop('title'));
 
 </script>
