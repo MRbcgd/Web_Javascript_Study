@@ -1,23 +1,18 @@
-<form class="" action="index.html" method="post" id="target">
-  <p id="result"></p><br>
-  <input type="text" name="" value="name" id="naming">
-  <input type="submit" name="" value="">
-</form>
-<script type="text/javascript">
-  var target=document.getElementById('target');
-  var naming=document.getElementById('naming');
-
-//submit 제어
-  target.addEventListener('submit',function(event){
-    if(naming.value.length==0){
-      alert('enter the word');
-      event.preventDefault();
-    }
-  });
-
-//change 제어
-  naming.addEventListener('change',function(event){
-    document.getElementById('result').innerHTML=event.target.value;
-  });
-
-</script>
+<!DOCTYPE html>
+<html>
+<head>
+  <script
+  src="https://code.jquery.com/jquery-3.1.1.js"
+  integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="
+  crossorigin="anonymous"></script>
+</head>
+  <body>
+    <input type="button" name="" value="jquery" id="target">
+    <script type="text/javascript">
+    //jQuery event, jquery를 통해 코드를 줄일수 있다.
+      $('#target').on('click',function(event){
+        console.log('1');
+      })
+    </script>
+  </body>
+</html>
