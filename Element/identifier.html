@@ -1,0 +1,43 @@
+<ul>
+  <li id="full_name" class="hello ohio">bak chulhyong</li>
+  <li>pch</li>
+</ul>
+<script type="text/javascript">
+  console.log(document.getElementById('full_name'));
+  console.log(document.getElementById('full_name').tagName);//tag 추출
+
+  var fullname=document.getElementById('full_name');
+  console.log(fullname.id);//id 추출
+  fullname.id='fullname';//id 변경
+  console.log(fullname.id);
+
+  fullname.clasName="initial li_";
+  console.log(fullname.clasName);
+  fullname.clasName+=' test';//class 추가
+  console.log(fullname.clasName);
+
+  //**className과 classList는 같이 쓰면 안될 것 같다....classList가 더 좋은것 같다.
+  for(var i = 0; i < fullname.classList.length; i++) {
+    console.log(i,fullname.classList[i]);
+  }
+
+  fullname.classList.add('hi');//class추가
+  for(var i = 0; i < fullname.classList.length; i++) {
+    console.log(i,fullname.classList[i]);
+  }
+
+  fullname.classList.remove('hi');//class삭제
+  for(var i = 0; i < fullname.classList.length; i++) {
+    console.log(i,fullname.classList[i]);
+  }
+
+  fullname.classList.toggle('hello');//토글할때마다 0,1처럼 지워졌다 생겼다함
+  for(var i = 0; i < fullname.classList.length; i++) {
+    console.log(i,fullname.classList[i]);
+  }
+
+  fullname.classList.toggle('hello');//토글할때마다 0,1처럼 지워졌다 생겼다함
+  for(var i = 0; i < fullname.classList.length; i++) {
+    console.log(i,fullname.classList[i]);
+  }
+</script>
