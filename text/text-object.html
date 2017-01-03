@@ -1,0 +1,39 @@
+<p id="target">cording everybody</p>
+<hr>
+
+data :<input type="text" name="" value="JavaScript" id="data"><br>
+start:<input type="text" name="" value="0" id="start"><br>
+end:<input type="text" name="" value="0" id="end"><br>
+<hr>
+
+<input type="button" name="" value="append" onclick="appendData_()">
+<input type="button" name="" value="delete" onclick="deleteData_()">
+<input type="button" name="" value="insert" onclick="insertData_()">
+<input type="button" name="" value="replace" onclick="replaceData_()">
+<input type="button" name="" value="substring" onclick="subStringData_()">
+
+<script type="text/javascript">
+  var target=document.getElementById('target').firstChild;
+  var data=document.getElementById('data');
+  var start=document.getElementById('start');
+  var end=document.getElementById('end');
+
+  function appendData_(){
+    target.appendData(data.value);
+  }
+  function deleteData_(){
+    target.deleteData(start.value,end.value);
+  }
+  function insertData_(){
+    target.insertData(start.value,data.value);
+  }
+  function insertData_(){
+    target.insertData(start.value,data.value);
+  }
+  function replaceData_(){
+    target.replaceData(start.value,end.value,data.value);
+  }
+  function subStringData_(){
+    alert(target.substringData(start.value,end.value));
+  }
+</script>
