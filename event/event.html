@@ -1,17 +1,12 @@
-<input type="button" name="" value="button1" id="target1"><br>
-<input type="button" name="" value="button2" id="target2"><br>
+<input type="checkbox" name="" value="" id="safety"><br>
+<a href="http://www.naver.com/" id="aaa">Naver</a>
 <script type="text/javascript">
-//addEventListener를 이용한 이벤트 등록
-  var t1=document.getElementById('target1');
-  var t2=document.getElementById('target2');
-  function event_(event){
-    if(event.target.id=='target1'){
-      alert("target1");
-    }
-    else{
-      alert("target2");
-    }
-  }
-  t1.addEventListener('click',event_);
-  t2.addEventListener('click',event_);
+//동작 제어
+    var a=document.getElementById('aaa');
+    var safety=document.getElementById('safety');
+    a.addEventListener('click',function(event){
+      if(safety.checked){
+        event.preventDefault();//기본 동작 취소
+      }
+    });
 </script>
