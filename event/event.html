@@ -1,12 +1,23 @@
-<input type="checkbox" name="" value="" id="safety"><br>
-<a href="http://www.naver.com/" id="aaa">Naver</a>
+<form class="" action="index.html" method="post" id="target">
+  <p id="result"></p><br>
+  <input type="text" name="" value="name" id="naming">
+  <input type="submit" name="" value="">
+</form>
 <script type="text/javascript">
-//동작 제어
-    var a=document.getElementById('aaa');
-    var safety=document.getElementById('safety');
-    a.addEventListener('click',function(event){
-      if(safety.checked){
-        event.preventDefault();//기본 동작 취소
-      }
-    });
+  var target=document.getElementById('target');
+  var naming=document.getElementById('naming');
+
+//submit 제어
+  target.addEventListener('submit',function(event){
+    if(naming.value.length==0){
+      alert('enter the word');
+      event.preventDefault();
+    }
+  });
+
+//change 제어
+  naming.addEventListener('change',function(event){
+    document.getElementById('result').innerHTML=event.target.value;
+  });
+
 </script>
